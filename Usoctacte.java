@@ -4,13 +4,12 @@ public class Usoctacte {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        Vehiculos miCoche=new Vehiculos();    //instancia la clase vehiculos
-        miCoche.setColor("verde");
-        System.out.println(miCoche.getColor());//se trae el metodo getcolor de la clase
-        
-        Vehiculos miCoche2=new Vehiculos();    //instancia la clase vehiculos
-        miCoche2.setColor("amarillo");
-        System.out.println(miCoche2.getColor());//se trae el metodo getcolor de la clase
-        
+        Ctactebancaria Cuenta1=new Ctactebancaria("Milton Ayala",1500);    //instancia la clase vehiculos
+        Ctactebancaria Cuenta2=new Ctactebancaria("Johanna Mora",2000);    //instancia la clase vehiculos
+        System.out.println(Cuenta1.getDatosCuenta());//se trae el metodo getcolor de la clase
+        System.out.println(Cuenta2.getDatosCuenta());
+        Ctactebancaria .Transferencia(Cuenta1,Cuenta2, 200);
+        System.out.println(Cuenta1.getDatosCuenta());//se trae el metodo getcolor de la clase
+        System.out.println(Cuenta2.getDatosCuenta());
    }
 }
