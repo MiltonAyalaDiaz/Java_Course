@@ -1,4 +1,6 @@
+
 package com.quantummad.Java_Course;
+
 import java.util.Random;
 
 public class Ctactebancaria {
@@ -10,6 +12,7 @@ public class Ctactebancaria {
                  // para diferenciarla del parametro
 
 		this.nombreTitular=nombreTitular;
+		
 		Random rnd=new Random();
 		numeroCuenta=Math.abs(rnd.nextLong());
 	}
@@ -18,9 +21,9 @@ public class Ctactebancaria {
 	private String nombreTitular;
 	private long numeroCuenta;
 	
-	public void setIngreso(double ingreso) {//metodo setter establece valor de propiedad
-											//el void no hace return
-		if (ingreso<0) System.out.println("No s permiten ingresos negtivos");
+	public void setIngreso(double ingreso) {//metodo setter void no return, establecer valor de propiedad
+						
+		if (ingreso<0) System.out.println("No se permiten ingresos negtivos");
 		else saldo+=ingreso;
 	}
 
@@ -28,10 +31,8 @@ public class Ctactebancaria {
            saldo-=reintegro; 
     }
  
-	public String getSaldo() {//metodo para retornar el saldo 
-		return "El saldo de la cuenta es:"+ saldo;
-	}
-
+	
+//static pertenece a la clase 
 	public static void Transferencia(Ctactebancaria titu1, Ctactebancaria titu2, double cantidad) {
 		titu1.saldo=titu1.saldo-cantidad;
 		titu2.saldo=titu2.saldo+cantidad;
@@ -40,8 +41,12 @@ public class Ctactebancaria {
 	public String getDatosCuenta() {
 		return "Titular: "+ nombreTitular + "\n"+
 	    "No de Cuenta: " + numeroCuenta + "\n"+
-				"Saldo: "+saldo;
-	}
+				"Saldo: "+saldo;	}
 	
 	
 }
+
+
+
+
+
